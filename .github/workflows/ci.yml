@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        compiler: [gcc, clang]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build (warnings are errors)
+        run: make CC=${{ matrix.compiler }}
+
+      - name: Unit tests
+        run: make test CC=${{ matrix.compiler }}
+
+      - name: Smoke test (encrypt + decrypt through the menu)
+        run: make smoke CC=${{ matrix.compiler }}
+
+      - name: Original course version still compiles
+        run: make original CC=${{ matrix.compiler }}
