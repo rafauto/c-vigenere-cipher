@@ -1,0 +1,14 @@
+{
+  "name": "c-vigenere-cipher",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1",
+  "postCreateCommand": "make && make test",
+  "postAttachCommand": "echo 'Ready! Run ./cipher to try the app.'",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md", "src/main.c"]
+    },
+    "vscode": {
+      "extensions": ["ms-vscode.cpptools"]
+    }
+  }
+}
