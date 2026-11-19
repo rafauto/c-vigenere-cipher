@@ -11,6 +11,14 @@ A command-line program in C that encrypts a message with a **randomly generated 
 Built as a university project (PjBL-2, *Imperative Programming*) and later revisited:
 the repository keeps the **original submission** next to a **revised version** with tests and CI.
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/rafauto/c-vigenere-cipher?quickstart=1)
+
+![Demo: encrypting and decrypting a message in the terminal](docs/screenshots/demo.gif)
+
+> **Try it in your browser, no install needed:** click *Open in GitHub Codespaces* above
+> (free with a GitHub account). The app compiles automatically; when the terminal is ready,
+> type `./cipher`.
+
 ## Why I built this
 
 The goal of the course project was to practice the fundamentals of imperative programming —
@@ -82,6 +90,8 @@ c-vigenere-cipher/
 │   └── main.c                   # Interactive menu and file handling
 ├── tests/test_cipher.c          # Unit tests (no external framework)
 ├── .github/workflows/ci.yml     # Build + tests on gcc and clang
+├── .devcontainer/               # Ready-to-run environment for GitHub Codespaces
+├── docs/screenshots/demo.gif    # Terminal demo used in this README
 ├── Makefile
 ├── CONTRIBUTING.md
 └── LICENSE
@@ -89,7 +99,8 @@ c-vigenere-cipher/
 
 ## Getting started
 
-Requirements: a C compiler (`gcc` or `clang`) and `make`.
+The quickest way is the **Open in GitHub Codespaces** button at the top. To run it locally
+you need a C compiler (`gcc` or `clang`) and `make`.
 
 ```bash
 git clone https://github.com/rafauto/c-vigenere-cipher.git
