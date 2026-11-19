@@ -23,5 +23,7 @@ jobs:
       - name: Smoke test (encrypt + decrypt through the menu)
         run: make smoke CC=${{ matrix.compiler }}
 
-      - name: Original course version still compiles
-        run: make original CC=${{ matrix.compiler }}
+      # The original uses functions before declaring them; clang rejects this, gcc accepts it.
+      - name: Original course version still compiles (gcc only)
+        if: matrix.compiler == 'gcc'
+        run: make original CC=gcc
