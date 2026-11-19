@@ -1,0 +1,19 @@
+# Build output
+cipher
+cipher_original
+test_cipher
+*.o
+*.exe
+
+# Files generated when running the program (may hold real messages and keys)
+cipher.txt
+key.txt
+arquivo-cripto.txt
+arquivo-chave.txt
+smoke.log
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
